@@ -37,6 +37,7 @@
                 var b = document.createElement('b')
                 b.setAttribute('style', 'float: right; cursor:pointer; color: blue');
                 b.setAttribute('class', `new-ele ${ind1-1} `);
+                b.setAttribute('id', `new-ele`);
                 b.setAttribute('onclick', 'DeleteItem(temp)');
                 b.textContent="Delete"
                // listItems.appendChild(br);
