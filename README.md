@@ -1,2 +1,2 @@
 # todo-app
-todo-app using JS DOM and Events
+url: https://mytodo-app.surge.sh/
