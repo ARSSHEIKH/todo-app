@@ -1,0 +1,143 @@
+.main-container{
+  margin-top: 20px;
+  
+}
+h1{
+  color: green;
+}
+h2{
+color: rgb(26, 46, 68);
+}
+h4{
+  color: rgb(82, 125, 175);
+}
+b{
+  color: rgb(82, 86, 90);
+}
+.todo-container{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+
+  flex-wrap: wrap;
+}
+.App {
+  /* text-align: center; */
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  height: 500px;
+  /* margin: 0 auto; */
+  background-color: #efefef;
+  box-shadow: 0 0 15px rgb(144, 133, 133);
+  /* background: #cfcfcf; */
+  
+  padding: 15px 50px;
+  flex: 3
+}
+.dvList{
+  flex: 1;
+}
+.dvInput-fields input, button{
+  /* padding: 5px;
+  margin: 4px; */
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px 0;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.txt-textArea{
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px 0;
+  height: 250px;
+  border-radius: 5px;
+}
+.btnAdd{
+  cursor: pointer;
+  background: rgb(112, 119, 136);
+  color: #fcfcfc;
+  font-size: 20px;
+}
+.btnAdd:hover{
+  background-color: rgb(65, 98, 209);
+  color: #fff;
+}
+.dvTable-list{
+ 
+  max-width: 68%;
+
+  padding: 50px;
+  background: rgb(206, 148, 148);
+  box-shadow: 0 0 15px rgb(187, 121, 121);
+}
+.even{
+  background: rgb(245, 229, 229);
+  padding-bottom: 3px;
+}
+.odd{
+  background: rgb(212, 203, 203);
+  padding-bottom: 3px;
+}
+.listDate{
+  color: rgba(71, 109, 216, 0.952);
+}
+.tbl-List{
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+}
+.dvTitle{
+  flex:40
+}
+.dvDesc{
+  border-bottom: 1px solid  #000;
+}
+.btnDeleteTitle{
+  color: rgb(248, 45, 45);
+}
+.btnEditTitle, .btnDeleteTitle{
+
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+ 
+  flex:1
+}
+.btnEditTitle{
+    background-color: rgb(16, 146, 59);
+    color: #efefef;
+}
+.btnEditTitle:hover{
+  background-color:transparent;
+  color:rgb(16, 146, 59);
+  border: 1px solid rgb(16, 146, 59);
+  border-radius: 5px;
+}
+.btnDeleteTitle:hover{
+  background-color: rgb(248, 45, 45);
+  border-radius: 15px 15px 10px 10px ;
+  color: #efefef;;
+}
+@media only screen and (max-width: 700px) {
+  .todo-container{
+    flex-direction: column;
+  }
+  .App{
+    min-width: 80%;
+    margin: 0 auto;
+  }
+  .dvTable-list{
+    max-width: 90%;
+    margin: 0 auto;
+
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .App {
+    max-width: 300px;
+  }
+}
