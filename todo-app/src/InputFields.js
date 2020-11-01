@@ -88,7 +88,7 @@ class InputFields extends Component {
                     </div>
                     <div className="dvInput-fields">
                         <form onSubmit={this.GetInput}>
-                            <input type="text" id="txtTitle" value={this.state.title} placeholder="title" onChange={this.titleHandler} required />
+                            <input type="text" id="txtTitle" value={this.state.title} placeholder="title" onChange={this.titleHandler} autocomplete = "off" required />
                             <br />
                             <textarea className="txt-textArea" placeholder="description ..." onChange={this.descHandler}></textarea>
                             <br />
