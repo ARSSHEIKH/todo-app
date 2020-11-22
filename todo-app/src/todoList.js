@@ -8,24 +8,29 @@ const TodoList = (props) => {
         <div className="dvTable-list col">
             <h2 align="center">Lists</h2>
             <div className="container">
-                {props.title.map((text, key) => {
-
-                    if (key % 2 == 0) {
-                        key = "even"
+                {props.title.map((text,  key) => {
+                ind = key
+                    if (ind % 2 == 0) {
+                        ind = "even"
                     }
                     else {
-                        key = "odd"
+                        ind = "odd"
                     }
 
                     return (
-                        <div>
-                        <div className={key}>
+                        <div className="dvMain">
+                        <div className={ind}>
                             <div className="tbl-List col" colspan="3">
                                 <div className="dvTitle">{text}</div>
-                                <div className="  btnDeleteTitle ">X</div>
+                               
+                                <div className="btnDeleteTitle">X</div>
                             </div>
                             <hr/>
-                           
+                            <div className="dvTitle">{props.desc[key]}</div>
+                               
+                            <hr/>
+                            <div className="dvTitle dvDate">Added on: {props.date[key]}</div>
+                            
                             <div className="col EditOrDeleteText">
                                 <div className="btnEditTitle">Edit</div>
                             </div>
@@ -37,13 +42,10 @@ const TodoList = (props) => {
                 )}
 
             </div>
-
-            {/* // <div className="tbl-List row">
-                        //     <b>{text}</b>
-                        // </div> */}
-
         </div>
-
     )
 }
+// function DeleteSelected(){
+    
+// }
 export default TodoList

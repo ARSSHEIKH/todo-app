@@ -73,13 +73,22 @@ b{
   background: rgb(206, 148, 148);
   box-shadow: 0 0 15px rgb(187, 121, 121);
 }
+.dvDate{
+  font-style: italic;
+  margin: 0;
+  color: gray
+}
+.dvMain{
+}
 .even{
-  background: rgb(245, 229, 229);
+  background: rgb(214, 179, 179);
   padding-bottom: 3px;
+  word-wrap:break-word;
 }
 .odd{
   background: rgb(212, 203, 203);
   padding-bottom: 3px;
+  word-wrap:break-word;
 }
 .listDate{
   color: rgba(71, 109, 216, 0.952);

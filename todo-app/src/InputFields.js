@@ -35,9 +35,9 @@ class InputFields extends Component {
         let inputdesc = this.state.desc
         let todoDesc = this.state.descList
         day = this.daysInWords(currentDate.getDay());
-
+        
         let inputDate = day + ", " + (parseInt(currentDate.getMonth()) + 1) + "/" + currentDate.getDate() + "/" + currentDate.getFullYear() + ". " + currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds()
-
+        console.log(inputDate)
         let todoDate = this.state.dateList
 
         todoList.push(inputTitle);
@@ -88,7 +88,7 @@ class InputFields extends Component {
                     </div>
                     <div className="dvInput-fields">
                         <form onSubmit={this.GetInput}>
-                            <input type="text" id="txtTitle" value={this.state.title} placeholder="title" onChange={this.titleHandler} autocomplete = "off" required />
+                            <input type="text" id="txtTitle" value={this.state.title} placeholder="title" onChange={this.titleHandler} autoComplete="off" required />
                             <br />
                             <textarea className="txt-textArea" placeholder="description ..." onChange={this.descHandler}></textarea>
                             <br />
