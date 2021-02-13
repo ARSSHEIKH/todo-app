@@ -3,7 +3,6 @@ let list = []
 let ind = 0
 
 const TodoList = (props) => {
-
     return (
         <div className="dvTable-list col">
             <h2 align="center">Lists</h2>
@@ -23,7 +22,7 @@ const TodoList = (props) => {
                             <div className="tbl-List col" colspan="3">
                                 <div className="dvTitle">{text}</div>
                                
-                                <div className="btnDeleteTitle">X</div>
+                                <div className="btnDeleteTitle" onClick={DeleteSelected(key)}>X</div>
                             </div>
                             <hr/>
                             <div className="dvTitle">{props.desc[key]}</div>
@@ -45,7 +44,7 @@ const TodoList = (props) => {
         </div>
     )
 }
-// function DeleteSelected(){
-    
+// function DeleteSelected(key){
+//     console.log(key);
 // }
 export default TodoList

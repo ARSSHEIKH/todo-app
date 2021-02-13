@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import TodoList from './todoList'
-
+import {firebaseConfig} from './firebase-config'
 
 let ind = 0;
+let userIpAdd;
 class InputFields extends Component {
     constructor(props) {
         super(props)
@@ -14,7 +15,19 @@ class InputFields extends Component {
             dateList: [],
             date: props.date
         }
+        this.load();
     }
+    
+async load() {
+  userIpAdd =  await (await fetch("https://api.ipify.org?format=json")).json();
+  
+  userIpAdd = userIpAdd.ip
+  for (let i = 0; i < userIpAdd.length; i++) {
+    if (userIpAdd[i] == ".") {
+        userIpAdd = userIpAdd.toString().replace('.', '%DOT')
+    }
+  }
+}
     titleHandler = (event) => {
         this.setState({
             title: event.target.value
@@ -27,6 +40,7 @@ class InputFields extends Component {
     }
     GetInput = (e) => {
         e.preventDefault();
+        
         let day;
         let currentDate = new Date()
         console.log(currentDate)
@@ -37,13 +51,18 @@ class InputFields extends Component {
         day = this.daysInWords(currentDate.getDay());
         
         let inputDate = day + ", " + (parseInt(currentDate.getMonth()) + 1) + "/" + currentDate.getDate() + "/" + currentDate.getFullYear() + ". " + currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds()
-        console.log(inputDate)
         let todoDate = this.state.dateList
 
         todoList.push(inputTitle);
         todoDesc.push(inputdesc);
         todoDate.push(inputDate);
 
+        let databaseValues={
+            index: ind,
+            title: inputTitle,
+            desc: inputdesc,
+            Date: inputDate,
+        }
         this.setState({
             titleList: todoList,
             title: "",
@@ -52,6 +71,8 @@ class InputFields extends Component {
             dateList: todoDate,
             inputDate: ""
         })
+        
+        firebaseConfig.database().ref('todosUsers/'+userIpAdd+'/'+ind + "/").set(databaseValues)
         ind++;
     }
     daysInWords(day) {
@@ -97,6 +118,7 @@ class InputFields extends Component {
                         </form>
                     </div>
                 </div>
+                
                 <TodoList title={this.state.titleList} desc={this.state.descList} date={this.state.dateList} />
             </div>
         )
