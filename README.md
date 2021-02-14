@@ -2,7 +2,7 @@
 
 ### deployed on:
 ### updated version by using React.js
-  #### [visit react app](http://ars-webprojects.surge.sh/)
+  #### [closed url](https://ars-todoapp.surge.sh/)
   
 ### by using JS DOM and Advanced Javascript
   #### [visit app](https://mytodo-app.surge.sh/)
@@ -13,4 +13,4 @@
     
 
 #### -----------------------X------------------------------
-  [closed url](https://ars-todoapp.surge.sh/)
+[visit react app](http://ars-webprojects.surge.sh/)
