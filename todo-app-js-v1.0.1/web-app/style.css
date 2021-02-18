@@ -20,3 +20,29 @@
     color: black;
     font-weight: bold;
 }
+.dvInp{
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    max-width: 400px;
+}
+.btnLogin{
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 5px;
+    float: right;
+    cursor: pointer;
+}
+.btnSave{
+    visibility: hidden;
+    cursor: pointer;
+}
+.appVersions{
+    color: rgb(123, 160, 240);
+    font-size: 20px;
+}
+.appVersions:hover{
+    color: rgb(32, 77, 175)
+}
