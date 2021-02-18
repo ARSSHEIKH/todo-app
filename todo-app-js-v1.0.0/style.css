@@ -1,0 +1,26 @@
+.main{
+    text-align: center;
+    margin: 50px auto auto auto;
+    display: flex;
+    flex-direction: column;
+}
+.main-container{
+    flex: 1;
+}
+.row-cols-3{
+}
+.text{
+    border: transparent;
+    border-bottom: 1px solid grey;
+}
+#col:hover{
+    background-color: rgb(181, 213, 243);
+}
+.appVersions{
+    color: rgb(21, 75, 192);
+    font-size: 20px;
+    font-weight: bold;
+}
+.appVersions:hover{
+    color: rgb(123, 160, 240);
+}

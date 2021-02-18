@@ -4,45 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="style.css">
     <title>TODO APP</title>
 </head>
-<style>
-    .main{
-        text-align: center;
-        margin: 150px auto auto auto;
-        display: flex;
-        flex-direction: column;
-    }
-    .main-container{
-        flex: 1;
-    }
-    .row-cols-3{
-        border: 1px solid blue;
-    }
-    .text{
-        border: transparent;
-        border-bottom: 1px solid grey;
-    }
-    /* #checkbox-items{
-      display: none;
-    } */
-    #col:hover{
-      background-color: rgb(181, 213, 243);
-    }
-
-</style>
+<style></style>
 <body>
   
+      <a class="appVersions" href="../todo-app-js-v1.0.1/web-app/index.html">New Version Available</a>
       <div class="container main">
         <div class="row row-cols-1">
           <div class="col">
             <h1>To-Do List</h1>
             <label for="textBox" class="label">What to do?</label>
-            <form action="">
+            <form onsubmit="btnAddToList(); return false">
                 
-                <input type="text" class="input-text" placeholder="Type here..."><br><br>
-                <input type="button" class="btnAdd" value="ADD" style="padding: 5px 60px 5px 60px;">
+                <input type="text" class="input-text" placeholder="Type here..." required><br><br>
+                <input type="submit" class="btnAdd" value="ADD" style="padding: 5px 60px 5px 60px;">
             </form>
           </div>
         </div>
