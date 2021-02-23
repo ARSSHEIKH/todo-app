@@ -1,0 +1,22 @@
+.tdDate{
+    font-style: italic;
+    font-size: small;
+}
+.td2Value{
+   width: 450px;
+}
+.table{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+.trDelete{
+    border-bottom: 1px solid black;
+}
+#inpEdit{
+    background: rgb(63, 128, 158);
+    color: black;
+    font-weight: bold;
+}

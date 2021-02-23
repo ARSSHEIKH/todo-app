@@ -36,6 +36,16 @@ b{
   padding: 15px 50px;
   flex: 3
 }
+.btnDeleteAll{
+  max-width: 70px;
+  font-size: 12px;
+  background-color: rgb(245, 89, 89);
+  border: rgb(85, 1, 1);
+  color: #fff;
+}
+.btnDeleteAll:hover{
+  background-color: red;
+}
 .dvList{
   flex: 1;
 }
