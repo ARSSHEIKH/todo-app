@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 let ind = 0
 const TodoList = (props) => {
@@ -16,7 +16,7 @@ const TodoList = (props) => {
             <div className="container">
                 {props.title.map((text, key) => {
                     ind = key
-                    if (ind % 2 == 0) {
+                    if (ind % 2 === 0) {
                         ind = "even";
                     }
                     else {
@@ -24,13 +24,14 @@ const TodoList = (props) => {
                     }
                     return (
                         <div className="dvMain" key={key}>
-                            <div className={ind} id={key}>
+                            <div className={`${ind} listItem${key}`} id={key}>
                                 <div className="tbl-List col" colspan="3">
                                     <input type="text" className="dvTitle" defaultValue={text} disabled={elemDisabler} />
 
                                     <div className="btnDeleteTitle" onClick={() => {
-                                        let thisElem = document.querySelector('.btnDeleteTitle')
-                                        thisElem.parentNode.parentNode.remove()
+                                        let thisElem = document.querySelector(`.listItem${key}`)
+                                        console.log(thisElem)
+                                        thisElem.remove()
                                     }}>X</div>
                                 </div>
                                 <hr />

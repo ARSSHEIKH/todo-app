@@ -23,7 +23,7 @@ async load() {
   
   userIpAdd = userIpAdd.ip
   for (let i = 0; i < userIpAdd.length; i++) {
-    if (userIpAdd[i] == ".") {
+    if (userIpAdd[i] === ".") {
         userIpAdd = userIpAdd.toString().replace('.', '%DOT')
     }
   }
