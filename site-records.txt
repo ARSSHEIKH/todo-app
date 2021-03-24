@@ -1,0 +1,9 @@
+google-site-verification=Mu-Av1aP612eGzeefKWUccnXaXU8IFM4aFzS2wpsNh4
+AIzaSyCq2I35xVwqXgtga6e34eVwe9JWYQslkCE
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}

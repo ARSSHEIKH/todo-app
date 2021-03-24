@@ -13,17 +13,29 @@
 </head>
 
 <body>
-    <a class="btnLogin btn-sm btn-success" data-toggle="modal" data-target="#registerBackdrop">
-        Register for Future Use
-    </a>
-    <a href="../../todo-app-js-v1.0.0/index.html" class="appVersions">Previous Version</a>
-    <span class="btnSave" style="margin-left: 10px;">  |   
-        <a class="btn-sm btn-success"style="margin-right: 10px;" data-toggle="modal" data-target="#saveDbBackdrop">
-        Save to Database
+    <div class="dvRegisteration">
+        <a class="btnLogin btn-sm btn-success" data-toggle="modal" data-target="#registerBackdrop">
+            Register for Future Use
         </a>
-    </span>
-    <br/>
-    <form onsubmit="AddList(); return false">
+        <button class="btn btn-secondary dropdown-toggle btnLogout" type="button" id="dropdownMenuButton"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="http://mytodo-app.surge.sh/">Logout</a>
+        </div>
+
+    </div>
+    <div class="dvSaveDB">
+        <a href="../../todo-app-js-v1.0.0/index.html" class="appVersions">Previous Version</a>
+        <span class="btnSave" style="margin-left: 10px;"> |
+            <a class="btn-sm btn-success" style="margin-right: 10px;" data-toggle="modal" data-target="#saveDbBackdrop">
+                Save to Database
+            </a>
+        </span>
+    </div>
+    <br />
+    <form>
         <div class="dvInp" style="padding: 20px; margin: 0 auto; display: flex; flex-direction:column;
         justify-content:center; max-width: 400px;
         ">
@@ -33,7 +45,7 @@
             <div style=" margin:5px; display: flex; flex-direction:row;
             justify-content:space-between; max-width: 600px;
             ">
-                <input type="submit" class="btn btn-primary" value="Add">
+                <input type="button" id="btnAddList" class="btn btn-primary" value="Add">
                 <input type="button" class="btn btn-danger" onclick="deleteAll()" value="Delete All">
             </div>
         </div>
@@ -56,21 +68,22 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                
+
                 <form class="modal-body" onsubmit="Registration(); return false">
                     <label>Enter Username: </label>
-                    <input type="text" autocomplete="off" id="nameReg" required/>
+                    <input type="text" autocomplete="off" id="nameReg" required />
                     <br />
                     <label>Enter Password: </label>
-                    <input type="Password" id="passReg" required/>
+                    <input type="Password" id="passReg" required />
                     <br />
                     <button type="submit" onclick="" class="btn btn-primary">
                         Register
                     </button>
                 </form>
-                    <label class="lblLoading"></label>
+                <label class="lblLoading"></label>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#loginBackdrop">Already Registered?</button>
+                    <button type="submit" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal"
+                        data-target="#loginBackdrop">Already Registered?</button>
                 </div>
             </div>
         </div>
@@ -88,21 +101,22 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                
+
                 <form class="modal-body" onsubmit="Login(); return false">
                     <label>Enter Username: </label>
-                    <input type="text" autocomplete="off" id="nameLogin" required/>
+                    <input type="text" autocomplete="off" id="nameLogin" required />
                     <br />
                     <label>Enter Password: </label>
-                    <input type="Password" id="passLogin" required/>
+                    <input type="Password" id="passLogin" required />
                     <br />
                     <button type="submit" onclick="" class="btn btn-primary">
                         Login
                     </button>
                 </form>
-                    <label class="lblLoginLoading"></label>
+                <label class="lblLoginLoading"></label>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#registerBackdrop">
+                    <button type="submit" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal"
+                        data-target="#registerBackdrop">
                         Not Register Yet?</button>
                 </div>
             </div>
@@ -120,7 +134,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                
+
                 <form class="modal-body">
                     <button type="button" data-dismiss="modal" class="btn btn-primary" onclick="saveToDB()">
                         Confirm to Save?
@@ -135,10 +149,10 @@
 
 
     <!--App Scripts-->
-    <script src="./index.js"></script>
-    <script src="./login.js"></script>
-    <script src="./saveDB.js"></script>
-    <script src="./registeration.js"></script>
+    <script src="./src/index.js"></script>
+    <script src="./src/saveDB.js"></script>
+    <script src="./src/login.js"></script>
+    <script src="./src/registeration.js"></script>
 
     <!--DB Scripts-->
     <script src="./firebase/firebase-app.js"></script>

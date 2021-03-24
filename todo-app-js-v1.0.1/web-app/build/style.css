@@ -1,3 +1,12 @@
+.dvSaveDB{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.btnLogout{
+    visibility: hidden;
+    float: right;
+}
 .tdDate{
     font-style: italic;
     font-size: small;

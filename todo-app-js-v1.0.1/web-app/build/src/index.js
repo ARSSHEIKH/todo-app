@@ -1,7 +1,12 @@
 
 let countList = 0
+let todoList = [];
 let lists = document.getElementById("listItems")
+let btnAddList = document.getElementById("btnAddList");
 let user_Username;
+let userLogin = "Not Login Yet";
+
+btnAddList.addEventListener("click", AddList)
 
 function createNodes(text, date, countList) {
 
@@ -40,7 +45,7 @@ function createNodes(text, date, countList) {
     editSubmit.setAttribute("disabled", "true")
     editSubmit.setAttribute("onclick", "editSubmit(this)")
     editSubmit.setAttribute("class", "btn btn-success btn-sm")
-    btnEdit.setAttribute("onclick", "editItem(this)")
+    btnEdit.setAttribute("onclick", "editItem(this); return false")
     btnEdit.setAttribute("class", "btnEdit btn btn-outline-success")
     //#endregion
 
@@ -109,6 +114,7 @@ function deleteItem(param) {
     parentTd.remove();
 }
 function deleteAll() {
-    lists.innerHTML = ""
-    countList = 0
+    lists.innerHTML = "";
+    countList = 0;
+    todoList = [];
 }
