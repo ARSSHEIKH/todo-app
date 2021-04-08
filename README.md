@@ -1,10 +1,10 @@
 # todo-app
 
 ### deployed on:
-### React.js
+### with React.js
   #### [visit react url](https://ars-todoapp.surge.sh/)
   
-### Advanced Javascript (updated)
+###  with Advanced Javascript v2
    #### [visit app](http://mytodo-app.surge.sh/)
 
 ### [Docker Image](https://hub.docker.com/r/arsalansheikh/todo-app2)
